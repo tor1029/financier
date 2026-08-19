@@ -15,21 +15,21 @@ time = stock.history(period = '10y') #max for full
 #all types of yf.(calendars(economic_calendar, etc))
 #--------------------------------------------------------------------------------------
 
-#SCREENER CODE 17-26
-#q = EquityQuery(
-#    'and', [
-#        EquityQuery('eq', ['region', 'us']),
-#        EquityQuery('gt',['percentchange', 10]),
-#        EquityQuery('eq',['exchange', 'NYQ'])
-#    ]
-#)
-#screen = yf.screen(q, sortField='percentchange', sortAsc=False)
-#for q in screen['quotes']:
-#    print(q['symbol'], q.get('displayName'), q.get('regularMarketChangePercent'))
+SCREENER CODE 
+q = EquityQuery(
+    'and', [
+        EquityQuery('eq', ['region', 'us']),
+        EquityQuery('gt',['percentchange', 10]),
+        EquityQuery('eq',['exchange', 'NYQ'])
+    ]
+)
+screen = yf.screen(q, sortField='percentchange', sortAsc=False)
+for q in screen['quotes']:
+    print(q['symbol'], q.get('displayName'), q.get('regularMarketChangePercent'))
 #--------------------------------------------------------------------------------------
 
 #PRINTING STOCK INFO 31-34
-#print(stock.info['forwardPE'])
+print(stock.info['forwardPE'])
 #to see all .info, just print stock.info no brackets
 #.news, .calendar, 
 #--------------------------------------------------------------------------------------

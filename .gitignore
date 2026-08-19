@@ -27,3 +27,21 @@
 /Spotify.lnk
 /TimerResolution.exe
 /Week 1
+
+# Ignore Windows shortcuts and system files
+*.lnk
+*.ini
+desktop.ini
+
+# Ignore Python bytecode & virtual environments
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore general temp files
+*.tmp
+*.log
